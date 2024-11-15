@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara9280-dara-tan-test-react-again-deployment
+  labels:
+    app: tan-dara9280-dara-tan-test-react-again
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara9280-dara-tan-test-react-again
+  template:
+    metadata:
+      labels:
+        app: tan-dara9280-dara-tan-test-react-again
+    spec:
+      containers:
+        - name: tan-dara9280-dara-tan-test-react-again-container
+          image: pipejet/tan-dara9280-dara-tan-test-react-again:0
+          ports:
+            - containerPort: 3000
